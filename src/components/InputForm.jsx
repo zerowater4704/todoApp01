@@ -10,7 +10,7 @@ export default function InputForm({ addTodo, setAddTodo, onAdd }) {
           onChange={(event) => setAddTodo(event.target.value)}
           placeholder="今日は何をしますか？"
         />
-        <button className="bg-red-400 px-3 py-1 rounded-md mx-2 font-mono">
+        <button className="bg-blue-400 hover:bg-blue-500 px-3 py-1 rounded-md mx-2 font-mono">
           Add
         </button>
       </form>

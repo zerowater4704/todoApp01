@@ -4,11 +4,11 @@ export default function TodoList({ todoList, onDelete, onCheck }) {
   return (
     <>
       <div>
-        <ul className=" px-3">
+        <ul className=" px-3 ">
           {todoList.map((todo) => (
             <li
               key={todo.id}
-              className="flex grow items-center gap-3 rounded bg-white p-2 my-2 text-xl font-bold"
+              className="flex grow border-4 border-sky-300 items-center gap-3 rounded bg-white p-2 my-2 text-xl font-bold"
             >
               <div>
                 <input

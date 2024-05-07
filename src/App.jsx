@@ -34,10 +34,10 @@ function App() {
 
   return (
     <>
-      <main className="bg-red-300 h-screen flex justify-center items-center ">
-        <div className="bg-yellow-300 w-[500px] h-[600px] rounded-xl text-center  overflow-auto hidden-scrollbar">
+      <main className="bg-slate-300 h-screen flex justify-center items-center ">
+        <div className="bg-white border-4 border-cyan-500  w-[500px] h-[600px] rounded-xl text-center  overflow-auto hidden-scrollbar">
           <Header />
-          <div className=" bg-green-500 m-4 rounded-md h-[540px]">
+          <div className=" border-4 border-sky-300 m-4 py-2 rounded-md h-auto">
             <InputForm
               addTodo={addTodo}
               setAddTodo={setAddTodo}
