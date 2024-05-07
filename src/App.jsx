@@ -34,17 +34,23 @@ function App() {
 
   return (
     <>
-      <Header />
-      <InputForm
-        addTodo={addTodo}
-        setAddTodo={setAddTodo}
-        onAdd={handleSubmit}
-      />
-      <TodoList
-        todoList={todoList}
-        onDelete={handleDelete}
-        onCheck={handleChecked}
-      />
+      <main className="bg-red-300 h-screen flex justify-center items-center ">
+        <div className="bg-yellow-300 w-[500px] h-[600px] rounded-xl text-center  overflow-auto hidden-scrollbar">
+          <Header />
+          <div className=" bg-green-500 m-4 rounded-md h-[540px]">
+            <InputForm
+              addTodo={addTodo}
+              setAddTodo={setAddTodo}
+              onAdd={handleSubmit}
+            />
+            <TodoList
+              todoList={todoList}
+              onDelete={handleDelete}
+              onCheck={handleChecked}
+            />
+          </div>
+        </div>
+      </main>
     </>
   );
 }
