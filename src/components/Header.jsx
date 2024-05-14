@@ -9,7 +9,7 @@ import UmbrellaIcon from "@mui/icons-material/Umbrella";
 export default function Header() {
   const [weather, setWeather] = useState(null);
 
-  const API_KEY = "12f6f63a3f2d1ffc8c327b0818e3c788 ";
+  
   const City = "Tokyo";
 
   const URL = `https://api.openweathermap.org/data/2.5/weather?q=${City}&APPID=${API_KEY}
