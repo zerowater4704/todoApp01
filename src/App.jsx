@@ -7,6 +7,8 @@ import TodoList from "./components/TodoList";
 function App() {
   const [addTodo, setAddTodo] = useState("");
   const [todoList, setTodoList] = useState([]);
+  const [editText, setEditText] = useState(null);
+  const [saveEdit, setSaveEdit] = useState("");
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -32,6 +34,21 @@ function App() {
     );
   }
 
+  function handleEdit(id, currentTitle) {
+    setEditText(id);
+    setSaveEdit(currentTitle);
+  }
+
+  function handleEditSave(id) {
+    setTodoList(
+      todoList.map((item) =>
+        item.id === id ? { ...item, title: saveEdit } : item,
+      ),
+    );
+    setEditText(null);
+    setSaveEdit("");
+  }
+
   return (
     <>
       <main className="bg-slate-300 h-screen flex justify-center items-center ">
@@ -47,6 +64,11 @@ function App() {
               todoList={todoList}
               onDelete={handleDelete}
               onCheck={handleChecked}
+              handleEdit={handleEdit}
+              handleEditSave={handleEditSave}
+              editText={editText}
+              saveEdit={saveEdit}
+              setSaveEdit={setSaveEdit}
             />
           </div>
         </div>
